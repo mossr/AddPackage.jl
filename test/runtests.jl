@@ -6,7 +6,7 @@ using AddPackage
     @test begin
         pass = false
         try
-            using Clustering
+            using Distributions
         catch err
             if err isa ArgumentError
                 pass = true
@@ -18,15 +18,15 @@ end
 
 @testset "Adding missing package" begin
     @test begin
-        @add using Clustering
-        kmeans isa Function
+        @add using Distributions
+        Distributions isa Module
     end
 end
 
 @testset "Adding multiple packages" begin
     @test begin
-        @add using Random, NearestNeighbors, LinearAlgebra
-        shuffle isa Function && knn isa Function && dot isa Function
+        @add using Random, Parameters, LinearAlgebra
+        Random isa Module && Parameters isa Module && LinearAlgebra isa Module
     end
 end
 

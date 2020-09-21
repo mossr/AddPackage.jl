@@ -6,10 +6,10 @@ An `@add` macro to automatically add a missing package when calling `using Packa
 
 Example:
 ```julia
-@add using Clustering
+@add using Distributions
 ```
 
-This will run `using Clustering` if it's already installed, otherwise will install the package, then run `using Clustering`.
+This will run `using Distributions` if it's already installed, otherwise will install the package, then run `using Distributions`.
 
 ## Installation:
 ```julia
@@ -19,8 +19,8 @@ This will run `using Clustering` if it's already installed, otherwise will insta
 ## Usage:
 ```julia
 using AddPackage
-@add using Clustering
-@add using Random, NearestNeighbors, LinearAlgebra
+@add using Distributions
+@add using Random, Parameters, LinearAlgebra
 ```
 
 ---
