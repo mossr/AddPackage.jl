@@ -13,7 +13,7 @@ This will run `using Distributions` if it's already installed, otherwise will in
 
 ## Installation:
 ```julia
-] add https://github.com/mossr/AddPackage.jl
+] add AddPackage
 ```
 
 ## Usage:
